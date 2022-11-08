@@ -2,5 +2,7 @@
   "appTitle": "Amazing Counters",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+  "countDown": "Countdown",
+   "settingsTitle": "Settings"
 }

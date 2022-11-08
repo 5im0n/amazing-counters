@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../settings/settings_view.dart';
 import 'count_down_timer.dart';
@@ -15,7 +16,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sample Items'),
+        title: Text(AppLocalizations.of(context)!.appTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -29,10 +30,10 @@ class HomeView extends StatelessWidget {
         ],
       ),
       body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: const [
-        CountdownTimer(time: 100, title: 'Mon super Timer'),
-        CountdownTimer(time: 30, autoStart: true),
-        CountdownTimer.amazing(time: 10),
+          child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        CountdownTimer(time: 100, title: AppLocalizations.of(context)!.countDown),
+        const CountdownTimer(time: 30, autoStart: true),
+        const CountdownTimer.amazing(time: 10),
       ])),
     );
   }

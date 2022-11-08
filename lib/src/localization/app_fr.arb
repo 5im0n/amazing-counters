@@ -1,3 +1,5 @@
 {
-  "appTitle": "Amazing Counters"
+  "appTitle": "Amazing Counters",
+  "countDown": "Compte à rebours",
+  "settingsTitle": "Paramètres"
 }
