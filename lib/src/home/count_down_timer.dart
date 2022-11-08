@@ -90,15 +90,20 @@ class _CountdownTimerState extends State<CountdownTimer> {
         GestureDetector(
             onTap: _toggleTimer,
             onLongPress: _resetTimer,
-            child: Container(
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
                 color: _isTimerActive() ? Colors.redAccent.shade400 : Colors.indigo,
               ),
-              child: Text(
-                '$remainingSeconds',
-                style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+              constraints: const BoxConstraints(minWidth: 80),
+              child: Center(
+                child: Text(
+                  '$remainingSeconds',
+                  style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ),
             )),
         TimerButton(callback: _incrementTimer, icon: Icons.add, disabled: _isTimerActive())
