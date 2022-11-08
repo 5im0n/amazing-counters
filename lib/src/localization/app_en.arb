@@ -1,0 +1,6 @@
+{
+  "appTitle": "amazing_counters",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
